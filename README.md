@@ -1,5 +1,5 @@
 # Where are data analysts working from? A country analysis
-![Image](https://baunsreit.es/wp-content/uploads/2020/07/data_analysts.png)
+![Image](https://user-images.githubusercontent.com/63467553/86499289-ba7b4a00-bd8a-11ea-83ed-331678eea79f.png)
 
 ### Motivation :blush:
 *This is my first project within the Ironhack Analytics Bootcamp (Part time version) in Madrid.*
