@@ -90,7 +90,7 @@ In order to analyse the country of your choice, you can choose from the followin
 - United Kingdom
 
 ### How to use :electric_plug:
-Run the main_scrip.py in your terminal to check the results. You can either run the script indicating the path selected or you can either select a country of your choice and get the `.csv`  file with the country input.
+Run the **main_scrip.py** in your terminal to check the results. You can either run the script indicating the path selected or you can either select a country of your choice and get the `.csv`  file with the country input.
 
 ### Country analysis :tada:
 An example of the input that you will be able to retrieve is the following:
