@@ -4,7 +4,7 @@
 ###Motivation :blush:
 *This is my first project within the Ironhack Analytics Bootcamp (Part time version) in Madrid.*
 
-###Overview :earth_africa:
+###:earth_africa: Overview
 The result of this project is to analyse how **data-related analysts** are working **depending on their location (countryside or urban)** and analyse these patterns according to the country they're living in. **You will also be able to download a CSV with the requested table** or even **analyse the results per country**, too.
 
 ---
