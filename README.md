@@ -1,99 +1,100 @@
-# Data Project README file
+# Where are data analysts working from? A country analysis
+![Image](https://baunsreit.es/wp-content/uploads/2020/07/data_analysts.png)
+###Motivation :blush:
+*This is my first project within the Ironhack Analytics Bootcamp (Part time version) in Madrid.*
 
-The README file describes the essence of the project playing the most important role. Most visitors will simply scroll down about twice on the README and leave if they are not interested. So, the README file should provide the reason **why** to checkout your project!!!). 
-Bearing that in mind, your job is to: 
-- Tell them what it is (with context).
-- Show them what it looks like in action.
-- Show them how they use it.
-- Tell them any other relevant details.
-
-![Image](https://res.cloudinary.com/springboard-images/image/upload/q_auto,f_auto,fl_lossy/wordpress/2019/05/aiexcerpt.png)
+###Overview :earth_africa:
+The result of this project is to analyse how **data-related analysts** are working **depending on their location (countryside or urban)** and analyse these patterns according to the country they're living in. **You will also be able to download a CSV with the requested table** or even **analyse the results per country**, too.
 
 ---
 
-## **Formatting**
-Your readers will most likely view your README in a browser so please keep that in mind when formatting its content: 
-- Use proper format when necesary (e.g.: `import pandas as pd`). 
-- Categorize content using two or three levels of header beneath. 
-- Make use of **emphasis** to call out important words. 
-- Link to project pages for related libraries you mention. Link to Wikipedia, Wiktionary, even Urban Dictionary definitions for words of which a reader may not be familiar. Make amusing cultural references. 
-- Add links to related projects or services. 
+### Data sources :scroll:
+ - Database with the job codes and the demographic information
+    - Provided by [Ironhack](http://www.potacho.com/files/ironhack/raw_data_project_m1.db) formatted as a `.db` file.
+ - API access to Swagger data created by [Work Data Initiative](http://api.dataatwork.org/v1/jobs/autocomplete?contains=data
+)
+ - Scraping the country codes from [Eurostat](https://ec.europa.eu/eurostat/statistics-explained/index.php/Glossary:Country_codes)
 
-> Here you have a markdown cheatsheet [Link](https://commonmark.org/help/) and tutorial [Link](https://commonmark.org/help/tutorial/).
+### Requirements :arrow_forward:
 
-
-## **Start writing ASAP:**
-*Last but not least, by writing your README soon you give yourself some pretty significant advantages. Most importantly, you’re giving yourself a chance to think through the project without the overhead of having to change code every time you change your mind about how something should be organized or what should be included.*
-
-
-## **Suggested Structure:**
-
-### :raising_hand: **Name** 
-Self-explanatory names are best. If the name sounds too vague or unrelated, it may be a signal to move on. It also must be catchy. Images, Logo, Gif or some color is strongly recommended.
-
-### :baby: **Status**
-Alpha, Beta, 1.1, Ironhack Data Analytics Final Project, etc... It's OK to write a sentence, too. The goal is to let interested people know where this project is at.
-
-### :running: **One-liner**
-Having a one-liner that describes the pipeline/api/app is useful for getting an idea of what your code does in slightly greater detail. 
-
-### :computer: **Technology stack**
-Python, Pandas, Scipy, Scikit-learn, etc. Indicate the technological nature of the software, including primary programming language(s), main libraries and whether the software is intended as standalone or as a module in a framework or other ecosystem.
-
-### :boom: **Core technical concepts and inspiration**
-Why does it exist? Frame your project for the potential user. Compare/contrast your project with other, similar projects so the user knows how it is different from those projects. Highlight the technical concepts that your project demonstrates or supports. Keep it very brief.
-
-### :wrench: **Configuration**
-Requeriments, prerequisites, dependencies, installation instructions.
-
-### :see_no_evil: **Usage**
-Parameters, return values, known issues, thrown errors.
-
-### :file_folder: **Folder structure**
+You will need to install and import or have already installed and imported the following Python libraries in order to be able to analyse the data:
+- Data analysis:
+    - Pandas
+    - Functools (Reduce)
+    - Numpy
+    - BeautifulSoup
+    - Re
+    - Sqlalchemy
+    - Requests
+- Data visualisation
+    - Seaborn
+    - Matplotlib
+    
+##Folder structure
 ```
 └── project
-    ├── __trash__
-    ├── .gitignore
-    ├── .env
-    ├── requeriments.txt
-    ├── README.md
-    ├── main_script.py
-    ├── notebooks
-    │   ├── notebook1.ipynb
-    │   └── notebook2.ipynb
-    ├── package1
-    │   ├── module1.py
-    │   └── module2.py
+    ├── __trash__    
     └── data
         ├── raw
         ├── processed
         └── results
+    ├── p_acquisition
+        ├── m_acquisition.py
+    ├── p_analysis
+        ├── m_analysis.py
+    ├── p_reporting
+        ├── m_reporting.py
+    ├── p_wrangling
+        ├── m_wrangling.py
+    ├── .env.txt
+    ├── .gitignore
+    ├── main_script.py
+    ├── README.md
+    ├── requirements.txt
 ```
+###Country analysis :crystal_ball:
+The following outputs will be available for you to download as a `.csv` 
+- Download the csv table with all the countries analysed and the representative percentage
+- Download the csv table with only one country analysed
 
-> Do not forget to include `__trash__` and `.env` in `.gitignore` 
+In order to analyse the country of your choice, you can choose from the following table, scraped from [Eurostat](https://ec.europa.eu/eurostat/statistics-explained/index.php/Glossary:Country_codes)
+- Austria
+- Belgium
+- Bulgaria
+- Croatia
+- Cyprus
+- Czechia
+- Denmark
+- Estonia
+- Finland
+- France
+- Germany
+- Greece
+- Hungary
+- Ireland
+- Italy
+- Latvia
+- Lithuania
+- Luxembourg
+- Malta
+- Netherlands
+- Poland
+- Portugal
+- Romania
+- Slovakia
+- Slovenia
+- Spain
+- Sweden
+- United Kingdom
 
-### :shit: **ToDo**
-Next steps, features planned, known bugs (shortlist).
+###How to use: :electric_plug:
+Run the main_scrip.py in your terminal to check the results. You can either run the script indicating the path selected or you can either select a country of your choice and get the `.csv`  file with the country input.
 
-### :information_source: **Further info**
-Credits, alternatives, references, license.
+###Country analysis: Spain example :tada:
+An example of the input that you will be able to retrieve is the following:
 
-### :love_letter: **Contact info**
-Getting help, getting involved, hire me please.
+![Image](https://baunsreit.es/wp-content/uploads/2020/07/spain.png)
 
----
-
-> Here you have some repo examples:
-- [Mamba (OCR-Translator-Assistant)](https://github.com/YonatanRA/OCR-translator-assistant-project)
-- [Art Classification](https://github.com/serguma/art_classification)
-- [OSNet-IBN (width x 1.0) Lite](https://github.com/RodMech/OSNet-IBN1-Lite)
-- [Movie Founder](https://github.com/Alfagu/final-project-Ironhack-0419mad)
-- [Convolutional Neural Network to detect Pneumonia](https://github.com/jmolins89/final-project)
-- [Brain tumor detection project](https://github.com/alonsopdani/brain-tumor-detection-project)
-- [Policy-Gradient-Methods](https://github.com/cyoon1729/Policy-Gradient-Methods)
-
-> Here you have some tools and references:
-- [Make a README](https://www.makeareadme.com/)
-- [Awesome README](https://github.com/matiassingers/awesome-readme)
-- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
+###Next steps :telescope:
+- Building a function that will retrieve visualisations for the data analysed
+- Be able to send the output automatised by email

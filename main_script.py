@@ -1,26 +1,32 @@
 import argparse
 from p_acquisition import m_acquisition as mac
 from p_wrangling import m_wrangling as mwr
-from p_analysis import m_analysis as man 
-from p_reporting import m_reporting as mre 
+from p_analysis import m_analysis as man
 
 def argument_parser():
-    parser = argparse.ArgumentParser(description = 'Set chart type')
-    parser.add_argument("-b", "--bar", help="Produce a barplot", action="store_true")
-    parser.add_argument("-l", "--line", help="Produce a lineplot", action="store_true")
+    parser = argparse.ArgumentParser(description='Select a country...')
+    parser.add_argument("-c", "--country", type=str, dest='country', help='Please select the country to start the analysis...')
+    parser.add_argument("-p", "--path", type=str, help='Please state the path you wish to analyse', required=True)
     args = parser.parse_args()
     return args
 
-def main(some_args):
-    data = mac.acquire()
-    filtered = mwr.wrangle(data, year)
-    results = man.analyze(filtered)
-    fig = mre.plotting_function(results, title, arguments)
-    mre.save_viz(fig, title)
-    print('========================= Pipeline is complete. You may find the results in the folder ./data/results =========================')
+def main(args):
+    print('Starting pipeline and retrieving information...')
+    print('Getting information from database analysed...')
+    df_m1 = mac.acquire(args.path)
+    df_m2 = mwr.wrangling(df_m1)
+
+    if args.country is None:
+        print('retrieving information for all countries...')
+        df_m3 = man.analysis(df_m2, 'all')
+
+    else:
+        df_m3 = man.analysis(df_m2, args.country)
+
+    print('********************* Pipeline is complete, you can find the results in the data results folder *********************')
 
 if __name__ == '__main__':
-    year = int(input('Enter the year: '))
-    title = 'Top 10 Manufacturers by Fuel Efficiency ' + str(year)
     arguments = argument_parser()
     main(arguments)
+
+
