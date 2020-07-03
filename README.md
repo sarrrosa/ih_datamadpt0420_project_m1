@@ -95,7 +95,7 @@ Run the main_scrip.py in your terminal to check the results. You can either run 
 ### Country analysis :tada:
 An example of the input that you will be able to retrieve is the following:
 
-![Image](https://baunsreit.es/wp-content/uploads/2020/07/spain.png)
+![Image](https://user-images.githubusercontent.com/63467553/86499345-0e862e80-bd8b-11ea-8927-2544ae23e3e4.png)
 
 ### Next steps - WIP :telescope:
 - Build a function that will retrieve visualisations for the data analysed directly into the results folder
