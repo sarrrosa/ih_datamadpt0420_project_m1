@@ -30,8 +30,9 @@ You will need to install and import or have already installed and imported the f
 - Data visualisation
     - Seaborn
     - Matplotlib
-    
-##Folder structure
+
+### Folder structure :bookmark_tabs:
+
 ```
 └── project
     ├── __trash__    
@@ -53,7 +54,7 @@ You will need to install and import or have already installed and imported the f
     ├── README.md
     ├── requirements.txt
 ```
-###Country analysis :crystal_ball:
+### Country analysis :crystal_ball:
 The following outputs will be available for you to download as a `.csv` 
 - Download the csv table with all the countries analysed and the representative percentage
 - Download the csv table with only one country analysed
@@ -88,14 +89,14 @@ In order to analyse the country of your choice, you can choose from the followin
 - Sweden
 - United Kingdom
 
-###How to use: :electric_plug:
+### How to use :electric_plug:
 Run the main_scrip.py in your terminal to check the results. You can either run the script indicating the path selected or you can either select a country of your choice and get the `.csv`  file with the country input.
 
-###Country analysis: Spain example :tada:
+### Country analysis :tada:
 An example of the input that you will be able to retrieve is the following:
 
 ![Image](https://baunsreit.es/wp-content/uploads/2020/07/spain.png)
 
-###Next steps :telescope:
-- Building a function that will retrieve visualisations for the data analysed
+### Next steps - WIP :telescope:
+- Build a function that will retrieve visualisations for the data analysed directly into the results folder
 - Be able to send the output automatised by email
